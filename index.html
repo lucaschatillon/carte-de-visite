@@ -216,7 +216,7 @@
   .row .label { display: block; font-weight: 600; font-size: 1.02rem; }
   .row .value { display: block; margin-top: 1px; font-size: .92rem; color: var(--ink-soft); overflow-wrap: anywhere; }
 
-  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .pair { display: grid; grid-template-columns: 1fr; gap: 12px; }
   .ghost {
     display: flex;
     align-items: center;
@@ -368,10 +368,6 @@
     </ul>
 
     <div class="pair">
-      <button class="ghost" type="button" data-share>
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
-        Partager
-      </button>
       <button class="ghost" type="button" data-open="qr-dialog">
         <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
         QR code
