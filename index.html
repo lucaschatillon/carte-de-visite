@@ -151,6 +151,21 @@
     color: #9DB1D6;
   }
   .identity .place svg { width: 15px; height: 15px; flex: none; }
+  button.place {
+    padding: 9px 10px 9px 0;
+    margin: -3px 0 -9px;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    font-size: .9rem;
+    text-align: left;
+    cursor: pointer;
+  }
+  button.place span {
+    text-decoration: underline;
+    text-decoration-color: rgba(157, 177, 214, .5);
+    text-underline-offset: 3px;
+  }
 
   /* ---------- Actions ---------- */
   .actions { display: grid; gap: 14px; padding: 18px 18px 26px; }
@@ -320,10 +335,10 @@
     <div class="identity">
       <h1>Lucas Châtillon</h1>
       <p class="role">Juriste en droit des collectivités territoriales</p>
-      <p class="place">
+      <button class="place" type="button" data-open="map-dialog" aria-label="Ouvrir Samer dans une application de cartes">
         <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-        Samer (62830)
-      </p>
+        <span>Samer (62830)</span>
+      </button>
     </div>
   </header>
 
@@ -395,6 +410,26 @@
     <a class="ghost" href="sms:+33683790714">
       <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
       Envoyer un SMS
+    </a>
+  </div>
+  <button class="ghost" type="button" data-close>Fermer</button>
+</dialog>
+
+<dialog id="map-dialog" aria-labelledby="map-title">
+  <h2 id="map-title">Samer (62830)</h2>
+  <p class="sub">Ouvrir avec</p>
+  <div class="stack">
+    <a class="ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Samer%2062830%20France" target="_blank" rel="noopener">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Google Maps
+    </a>
+    <a class="ghost" href="https://maps.apple.com/?q=Samer%2062830%20France" target="_blank" rel="noopener">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Plans (Apple)
+    </a>
+    <a class="ghost" href="https://waze.com/ul?q=Samer%2062830%20France" target="_blank" rel="noopener">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Waze
     </a>
   </div>
   <button class="ghost" type="button" data-close>Fermer</button>
